@@ -1,0 +1,32 @@
+div{
+    background-color: #a1b5cb;
+    text-align: center;
+}
+/*diseño de foto*/
+@media (min-width: 576px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 2%;
+        top: 650px;
+    }       
+}
+
+@media (max-width: 575px){
+    #fotodeperfil{
+        position: absolute;
+        width: 30%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 35%;
+        top: 630px;
+    }       
+}
+
+/*diseño de nombre*/
+#nombre{
+    font-weight: bold;
+    margin-top: 30%;
+}
