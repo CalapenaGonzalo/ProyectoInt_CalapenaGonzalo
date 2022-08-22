@@ -15,3 +15,13 @@ img{
 .btm{
     border-width: medium;
 }
+
+@media (max-width: 399px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding-block: 10px;
+    }       
+}
