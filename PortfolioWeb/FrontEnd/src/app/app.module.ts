@@ -13,6 +13,9 @@ import { HardSoftSkillsComponent } from './componentes/hard-soft-skills/hard-sof
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './componentes/home/home.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { HttpClientModule } from '@angular/common/http';
     EducacionComponent,
     HardSoftSkillsComponent,
     ProyectoComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
