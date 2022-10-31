@@ -1,5 +1,8 @@
 div{
-    background-color: #a1b5cb;
+    background: #0CCEC3;
+    background: -moz-linear-gradient(top, #0CCEC3 0%, #1C6EA4 50%, #5644C5 100%);
+    background: -webkit-linear-gradient(top, #0CCEC3 0%, #1C6EA4 50%, #5644C5 100%);
+    background: linear-gradient(to bottom, #0CCEC3 0%, #1C6EA4 50%, #5644C5 100%);
 }
 app-redes-sociales{
     float: right;

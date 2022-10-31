@@ -1,25 +1,17 @@
 <div class="row">
-    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../../../assets/GitHub_Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
+    <h1>Hard & Soft Skill</h1>
+
+    <div class="col-lg-2">
+        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
     </div>
-    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">
         <circle-progress
-        [percent]="85"
+        [percent]="(skill.porcentaje)"
         [radius]="100"
-        [imageSrc]="'../../../assets/GitHub_Logo.png'"
+        [imageSrc]="''"
+        [title]="(skill.nombre)"
+        [titleColor]="'#212F3C'"
         [showImage]="true"
         [imageHeight]="100"
         [imageWidth]="100"
@@ -30,69 +22,13 @@
         [animation]="true"
         [animationDuration]="800"
     ></circle-progress>
-    </div>
-    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../../../assets/GitHub_Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
-    </div>
-    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../../../assets/GitHub_Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
-    </div>
-    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../../../assets/GitHub_Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
-    </div>
-    <div class="text-center col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../../../assets/GitHub_Logo.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
+
+    <td *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/edithys/{{skill.id}}">
+            <i class="bi bi-pencil-square"></i> EDITAR</button>
+    </td>
+    <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(skill.id)">
+            <i class="bi bi-trash3-fill"></i> BORRAR</button></td>
     </div>
 </div>
